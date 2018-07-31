@@ -15,7 +15,6 @@ namespace Battleship.Core
         public void Setup(Commands.SetupCommand setupData)
         {
             
-            PalyerName = setupData.PlayerName;
             _squares = new Square[Dimension, Dimension];
             _ships = setupData.CreateShips();
             Parallel.ForEach(_ships, ship =>

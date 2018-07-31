@@ -8,15 +8,13 @@ namespace Battleship.Core
     public class Commands
     {
         public class HitCommand
-        {
-            public string PlayerName { get; set; }
+        {          
             public int X { get; set; }
             public int Y { get; set; }
         }
 
         public class SetupCommand
         {
-            public string PlayerName { get; set; }
             public string[] Ships { get; set; }
 
             public Ship[] CreateShips()

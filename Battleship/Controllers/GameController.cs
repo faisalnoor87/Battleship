@@ -6,7 +6,7 @@ using System.Web.Http;
 
 namespace Battleship.Controllers
 {
-    [RoutePrefix("api/battleship")]
+    [RoutePrefix("api")]
     public class GameController : ApiController
     {
         [Route("setup")]
