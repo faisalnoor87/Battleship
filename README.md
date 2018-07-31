@@ -18,23 +18,23 @@
 * http://localhost/battleship/api/setup - Setup board and battleship
 ```
 {
-    Ships:
+	Ships:
 	[
-		"shipName x,y Length R",
-		"shipname x,y Length B"
-    ]
+	  "shipName x,y Length R",
+	  "shipname x,y Length B"
+	]
 }
 x,y - It is the x,y coordinates of the ship. replace it with actual coordinates
 3 - Length of the ship. 
 R - Direction of the ship (it is either R or B)
 
-example data:
+example:
 {
-	 Ships:
-	 [
-		 "ship-p1-one 1,1 2 R",
-		 "ship-p1-two 2,9 2 B"
-     ]
+	Ships:
+	[
+	  "ship-p1-one 1,1 2 R",
+	  "ship-p1-two 2,9 2 B"
+	]
 }
 ```
 	
