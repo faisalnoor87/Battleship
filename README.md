@@ -14,10 +14,6 @@
 * Right click on Battleship project And Select Set as StartUp Project.
 * Start the application.
 
-## End to end test
-* Go to Battleship.E2E.Tests then open GameControllerTests.cs file and run all tests
-* It setup the the board and battleship and starting attacking on specified locations.
-
 ## Endpoints
 * http://localhost/battleship/api/setup - Setup board and battleship
 ```
@@ -50,7 +46,11 @@ example data:
 }
 	X,Y are the coordinates of the attacking position.
 ```
-	
+
+## End to end test
+* Go to Battleship.E2E.Tests then open GameControllerTests.cs file and run all tests
+* It setup the the board and battleship and starting attacking on specified locations.
+
 ## Testing tool
 * Postman
 	
