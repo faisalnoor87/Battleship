@@ -21,7 +21,7 @@
     PlayerName: "playerName",
     Ships:[
     	"shipName x,y Length R",
-		"shipname x,y Length B"
+	"shipname x,y Length B"
         ]
 }
 x,y - It is the x,y coordinates of the ship. replace it with actual coordinates
@@ -32,7 +32,7 @@ example data:
 {
 	 PlayerName: "p1",
 	 Ships:[
-			 "ship-p1-one 1,1 2 R",
+	     "ship-p1-one 1,1 2 R",
              "ship-p1-two 2,9 2 B"
         ]
 }
