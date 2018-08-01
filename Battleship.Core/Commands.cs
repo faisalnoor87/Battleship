@@ -29,12 +29,15 @@ namespace Battleship.Core
                         var name = segments[0];
                         var location = segments[1];
                         var length = segments[2];
-                        var direction = segments[3];
+                        var direction = segments[3].ToUpper();
+                        if (new[] { "H", "V" }.All(x => x != direction))
+                            throw new InvalidDataException("Invalid direction");
+
                         var points = location.Split(',');
                         return new Ship(name,
                             new Point(Convert.ToInt16(points[0]), Convert.ToInt16(points[1])),
                             Convert.ToInt16(length),
-                            direction.ToUpper() == "H" ? Ship.Direction.Horizontal : Ship.Direction.Vertical);
+                            direction == "H" ? Ship.Direction.Horizontal : Ship.Direction.Vertical);
                     }).ToArray();
                 }
                 catch (Exception ex)
