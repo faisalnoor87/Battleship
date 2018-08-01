@@ -46,6 +46,11 @@ example:
 }
 	X,Y are the coordinates of the attacking position.
 ```
+## Assumptions
+* Only single player is supported at the moment.
+* Player needs to setup the board and battleship first in order to start playing the game. Please have a look at above setup endpoint example data to setup the board.
+* Player can only start attacking once the board is setup. player can attack on a position by providing x and y coordinates. Please have a look at above hit endpoint example data.
+
 
 ## End to end test
 * Go to Battleship.E2E.Tests then open GameControllerTests.cs file and run all tests
