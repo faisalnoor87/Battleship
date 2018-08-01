@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Battleship.Core
+﻿namespace Battleship.Core
 {
     public static class Storage
     {
