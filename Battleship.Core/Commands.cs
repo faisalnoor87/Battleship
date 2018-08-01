@@ -34,13 +34,13 @@ namespace Battleship.Core
                         return new Ship(name,
                             new Point(Convert.ToInt16(points[0]), Convert.ToInt16(points[1])),
                             Convert.ToInt16(length),
-                            direction == "R" ? Ship.Direction.Right : Ship.Direction.Bottom);
+                            direction.ToUpper() == "H" ? Ship.Direction.Horizontal : Ship.Direction.Vertical);
                     }).ToArray();
                 }
                 catch (Exception ex)
                 {
                     throw new InvalidDataException(
-                        "Please check the ships data, the format should be eg. 'shipnameH1 x,y 3 R'/'shipnameH2 x,y 5 B'",
+                        "Please check the ships data, the format should be eg. 'shipnameH1 x,y 3 H'/'shipnameH2 x,y 5 V'",
                         ex);
                 }
 

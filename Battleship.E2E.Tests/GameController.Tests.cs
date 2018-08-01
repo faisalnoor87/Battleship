@@ -29,8 +29,8 @@ namespace Battleship.E2E.Tests
             {
                 Ships = new[]
                 {
-                    "ship-p1-one 1,1 2 R",
-                    "ship-p1-two 2,9 2 B"
+                    "ship-p1-one 1,1 2 H",
+                    "ship-p1-two 2,9 2 V"
                 }
             });
            

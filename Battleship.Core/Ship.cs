@@ -8,8 +8,8 @@ namespace Battleship.Core
         public Ship(string name, Point point, int length, Direction direction)
         {
             Name = name;
-            Squares = Enumerable.Range(direction == Direction.Right ? point.Y : point.X, length)
-                .Select(e => direction == Direction.Right ? new Point(point.X, e) : new Point(e, point.Y))
+            Squares = Enumerable.Range(direction == Direction.Horizontal ? point.Y : point.X, length)
+                .Select(e => direction == Direction.Horizontal ? new Point(point.X, e) : new Point(e, point.Y))
                 .Select(p => new Square(p, HitResult.None)).ToArray();
         }
 
@@ -43,8 +43,8 @@ namespace Battleship.Core
 
         public enum Direction
         {
-            Right,
-            Bottom
+            Horizontal,
+            Vertical
         }
 
     }

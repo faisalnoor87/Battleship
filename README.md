@@ -20,20 +20,20 @@
 {
 	Ships:
 	[
-	  "shipName x,y Length R",
-	  "shipname x,y Length B"
+	  "shipName x,y Length H",
+	  "shipname x,y Length V"
 	]
 }
 x,y - It is the x,y coordinates of the ship. replace it with actual coordinates
-3 - Length of the ship. 
-R - Direction of the ship (it is either R or B)
+3 - Length of the ship. It could be any number that fits with in the board without overlapping.
+H - Direction of the ship (it is either H(Horizontal) or V(Vertical))
 
 example:
 {
 	Ships:
 	[
-	  "ship-p1-one 1,1 2 R",
-	  "ship-p1-two 2,9 2 B"
+	  "ship-p1-one 1,1 2 H",
+	  "ship-p1-two 2,9 2 V"
 	]
 }
 ```
