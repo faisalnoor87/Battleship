@@ -3,6 +3,7 @@ using Battleship.Core;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Battleship.ViewModel;
 
 namespace Battleship.Controllers
 {
@@ -29,7 +30,7 @@ namespace Battleship.Controllers
         public HttpResponseMessage Hit(Commands.HitCommand hitCommand)
         {
             var status = Storage.Console.Hit(hitCommand);
-            return Request?.CreateResponse(HttpStatusCode.OK, status);
+            return Request?.CreateResponse(HttpStatusCode.OK, new Status(status.Result.ToString(), status.Finished));
         }
     }
 }

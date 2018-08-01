@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Battleship.ViewModel;
 
 namespace Battleship.E2E.Tests
 {
@@ -40,27 +41,27 @@ namespace Battleship.E2E.Tests
                 new
                 {
                     HitCommand = new Commands.HitCommand {X = 0, Y = 0},
-                    Expected = new {Result = HitResult.Miss, Finished = false}
+                    Expected = new Status(HitResult.Miss.ToString(), false)
                 },
                 new
                 {
                     HitCommand = new Commands.HitCommand { X = 1, Y = 1},
-                    Expected = new {Result = HitResult.Hit, Finished = false}
+                    Expected =  new Status(HitResult.Hit.ToString(), false)
                 },
                 new
                 {
                     HitCommand = new Commands.HitCommand { X = 1, Y = 2},
-                    Expected = new {Result = HitResult.Sink, Finished = false}
+                    Expected = new Status(HitResult.Sink.ToString(), false)
                 },
                 new
                 {
                     HitCommand = new Commands.HitCommand { X = 2, Y = 9},
-                    Expected = new {Result = HitResult.Hit, Finished = false}
+                    Expected =  new Status(HitResult.Hit.ToString(), false)
                 },
                 new
                 {
                     HitCommand = new Commands.HitCommand { X = 3, Y = 9},
-                    Expected = new {Result = HitResult.Sink, Finished = true}
+                    Expected = new Status(HitResult.Sink.ToString(), true)
                 }
 
             };
@@ -68,7 +69,7 @@ namespace Battleship.E2E.Tests
             Array.ForEach(commands, e =>
             {
                 var status = Hit(e.HitCommand);
-                Assert.AreEqual(e.Expected.Result, status.Result);
+                Assert.AreEqual(e.Expected.Result, status.Result.ToString());
                 Assert.AreEqual(e.Expected.Finished, status.Finished);
             });
         }
